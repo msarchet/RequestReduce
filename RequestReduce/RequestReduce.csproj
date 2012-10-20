@@ -103,6 +103,7 @@
     <Compile Include="Api\SpriteFilter.cs" />
     <Compile Include="Api\SpriteFilterContext.cs" />
     <Compile Include="Configuration\RequestReduceConfigSection.cs" />
+    <Compile Include="Handlers\DashboardDataHandler.cs" />
     <Compile Include="Handlers\DashboardHandler.cs" />
     <Compile Include="Handlers\FlushHandler.cs" />
     <Compile Include="Handlers\HandlerFactory.cs" />

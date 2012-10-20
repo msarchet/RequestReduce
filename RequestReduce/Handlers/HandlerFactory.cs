@@ -32,6 +32,8 @@ namespace RequestReduce.Handlers
                 return RRContainer.Current.GetInstance<FlushHandler>();
             if (actionUrl.ToLowerInvariant().Contains("/dashboard/") && postAuth)
                 return RRContainer.Current.GetInstance<DashboardHandler>();
+            if (actionUrl.ToLowerInvariant().Contains("/dashboarddata/") && postAuth)
+                return RRContainer.Current.GetInstance<DashboardDataHandler>();
             return sig != Guid.Empty.RemoveDashes() && sig != null ? RRContainer.Current.GetInstance<ReducedContentHandler>() : null;
         }
 

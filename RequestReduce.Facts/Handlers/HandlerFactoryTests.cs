@@ -68,7 +68,7 @@ namespace RequestReduce.Facts.Handlers
             }
 
             [Theory]
-            [InlineData("http://host/RRContent/dashboard", true, typeof(DashboardHandler))]
+            [InlineData("http://host/RRContent/dashboard", true, typeof(DashboardDataHandler))]
             [InlineData("http://host/RRContent/dashboard", false, null)]
             [InlineData("http://host/content/someresource.less", false, null)]
             [InlineData("http://host/RRContent/child/someresource", false, null)]
@@ -89,7 +89,7 @@ namespace RequestReduce.Facts.Handlers
                 RRContainer.Current = new Container(x =>
                 {
                     x.For<FlushHandler>().Use(new MoqAutoMocker<FlushHandler>().ClassUnderTest);
-                    x.For<DashboardHandler>().Use(new MoqAutoMocker<DashboardHandler>().ClassUnderTest);
+                    x.For<DashboardDataHandler>().Use(new MoqAutoMocker<DashboardDataHandler>().ClassUnderTest);
                     x.For<ReducedContentHandler>().Use(new MoqAutoMocker<ReducedContentHandler>().ClassUnderTest);
                 });
 

@@ -41,6 +41,7 @@ namespace RequestReduce.IOC
                 x.For<IWuQuantizer>().Singleton().Use<WuQuantizer>();
                 x.For<ICssImageTransformer>().Singleton().Use<CssImageTransformer>();
                 x.For<DashboardHandler>().Singleton().Use<DashboardHandler>();
+                x.For<DashboardDataHandler>().Singleton().Use<DashboardDataHandler>();
                 x.For<FlushHandler>().Singleton().Use<FlushHandler>();
                 x.For<ReducedContentHandler>().Singleton().Use<ReducedContentHandler>();
                 x.For<IRelativeToAbsoluteUtility>().Use<RelativeToAbsoluteUtility>();
